@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Timezone
-ln -sf /usr/share/zoneinfo/Brazil/Sao_Paulo /etc/localtime
+ln -sf /usr/share/zoneinfo/America/Brasilia /etc/localtime
 
 #Using script from http://docs.aws.amazon.com/AmazonECS/latest/developerguide/using_cloudwatch_logs.html
 # Install awslogs and the jq JSON parser
