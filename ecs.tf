@@ -65,7 +65,3 @@ variable "desired_capacity" {
 variable "instance_type" {
   description = "Size of instances in the ECS cluster."
 }
-
-output "default_alb_target_group" {
-  value = module.ecs.default_alb_target_group
-}
