@@ -10,11 +10,8 @@ module "ecs" {
   cluster              = var.environment
   cloudwatch_prefix    = "${var.environment}"           #See ecs_instances module when to set this and when not!
   vpc_cidr             = var.vpc_cidr
-  vpc_id               = var.vpc_id
   public_subnet_cidrs  = var.public_subnet_cidrs
   private_subnet_cidrs = var.private_subnet_cidrs
-  public_subnet_ids  = var.public_subnet_ids
-  private_subnet_ids = var.private_subnet_ids
   availability_zones   = var.availability_zones
   max_size             = var.max_size
   min_size             = var.min_size
@@ -38,23 +35,12 @@ variable "aws_ecs_ami" {
 variable "vpc_cidr" {
   description = "The IP range to attribute to the virtual network."
 }
-variable "vpc_id" {
-  description = "The IP ID to attribute to the virtual network."
-}
 variable "public_subnet_cidrs" {
   description = "The IP ranges to use for the public subnets in your VPC."
   type = list
 }
 variable "private_subnet_cidrs" {
   description = "The IP ranges to use for the private subnets in your VPC."
-  type = list
-}
-variable "public_subnet_ids" {
-  description = "The IP IDs to use for the public subnets in your VPC."
-  type = list
-}
-variable "private_subnet_ids" {
-  description = "The IP IDs to use for the private subnets in your VPC."
   type = list
 }
 variable "availability_zones" {
