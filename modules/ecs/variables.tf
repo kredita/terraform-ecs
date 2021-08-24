@@ -49,10 +49,6 @@ variable "desired_capacity" {
   description = "The desired capacity of the cluster"
 }
 
-variable "key_name" {
-  description = "SSH key name to be used"
-}
-
 variable "instance_type" {
   description = "AWS instance type to use"
 }
