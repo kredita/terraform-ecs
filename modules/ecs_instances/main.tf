@@ -39,7 +39,7 @@ resource "aws_launch_configuration" "launch" {
   security_groups      = ["${aws_security_group.instance.id}"]
   user_data            = data.template_file.user_data.rendered
   iam_instance_profile = var.iam_instance_profile_id
-  key_name             = var.key_name
+  # key_name             = var.key_name
 
   # aws_launch_configuration can not be modified.
   # Therefore we use create_before_destroy so that a new modified aws_launch_configuration can be created 

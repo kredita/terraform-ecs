@@ -12,7 +12,6 @@ module "ecs_instances" {
   desired_capacity        = var.desired_capacity
   vpc_id                  = var.vpc_id
   iam_instance_profile_id = aws_iam_instance_profile.ecs.id
-  key_name                = var.key_name
   custom_userdata         = var.custom_userdata
   cloudwatch_prefix       = var.cloudwatch_prefix
 }
